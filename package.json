@@ -2,6 +2,7 @@
   "name": "telegram-mini-app-backend",
   "version": "1.0.0",
   "type": "module",
+  "main": "src/server.js",
   "license": "MIT",
   "scripts": {
     "start": "node dist/src/server",
