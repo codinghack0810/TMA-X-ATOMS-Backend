@@ -4,8 +4,8 @@ import bodyParser from "body-parser";
 import morgan from "morgan";
 import dotenv from "dotenv";
 
-import dbConnect from "./config/dbConnect.js";
-import router from "./router/api/v1/index.js";
+import dbConnect from "./src/config/dbConnect.js";
+import router from "./src/router/api/v1/index.js";
 
 dotenv.config();
 
