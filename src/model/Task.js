@@ -7,14 +7,34 @@ const TaskSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "users"
     },
-    twitter: {
-        type: Boolean,
-        default: false
+    twitterHandle: {
+        type: String,
+        default: ""
     },
     telegram: {
         type: Boolean,
         default: false
     },
+    btcWallet: {
+        type: String,
+        default: ""
+    },
+    websiteVisited: {
+        type: Boolean,
+        default: false
+    },
+    emailAddress: {
+        type: String,
+        default: ""
+    },
+    telegramId: {
+        type: String,
+        default: ""
+    },
+    mintXATOMS: {
+        type: Boolean,
+        default: false
+    }
 });
 
 const Task = moongoose.model("tasks", TaskSchema);

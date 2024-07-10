@@ -10,10 +10,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "axios": "^1.7.2",
+    "bitcoin-address": "^0.3.0",
+    "bs58": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "ethereum-address": "^0.0.4",
     "express": "^4.19.2",
-    "mongoose": "^8.4.3"
+    "mongoose": "^8.4.3",
+    "node-telegram-bot-api": "^0.66.0"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
