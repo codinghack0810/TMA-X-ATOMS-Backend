@@ -8,6 +8,7 @@ export const test = (req, res) => {
 
 export const login = async (req, res) => {
     const { telID, username, wallet, dateNum } = req.body;
+    console.log("telID, username, wallet, dateNum", telID, username, wallet, dateNum);
     try {
         const user = await User.findOne({ wallet });
         if (user) {
