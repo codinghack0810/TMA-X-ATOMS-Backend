@@ -126,7 +126,7 @@ export const verifyFollow = async (req, res) => {
     // const followsYourAccount = following.data.some(user => user.username === 'GoRWAChain');
 
     let userInfo = await User.findOne({
-      wallet: wallet_address.toLowerCase(),
+      wallet: wallet_address,
     });
     if (!userInfo) {
       return { status: "failure", message: "User does not exist", reward: 0 };
@@ -197,7 +197,7 @@ export const verifyTelegramJoin = async (req, res) => {
   }
 
   let userInfo = await User.findOne({
-    wallet: wallet_address.toLowerCase(),
+    wallet: wallet_address,
   });
   if (!userInfo) {
     return { status: "failure", message: "User does not exist", reward: 0 };
@@ -268,7 +268,7 @@ export const verifyWebsiteVisit = async (req, res) => {
       .json({ status: "failure", message: "Missing required fields" });
   }
 
-  let userInfo = await User.findOne({ wallet: wallet_address.toLowerCase() });
+  let userInfo = await User.findOne({ wallet: wallet_address });
   if (!userInfo) {
     return res
       .status(400)
@@ -313,7 +313,7 @@ export const shareBTCWallet = async (req, res) => {
       .json({ status: "failure", message: "Invalid Address" });
   }
 
-  let userInfo = await User.findOne({ wallet: wallet_address.toLowerCase() });
+  let userInfo = await User.findOne({ wallet: wallet_address });
   if (!userInfo) {
     return res
       .status(400)
@@ -353,7 +353,7 @@ export const shareEmailAddress = async (req, res) => {
       .json({ status: "failure", message: "Missing required fields" });
   }
 
-  let userInfo = await User.findOne({ wallet: wallet_address.toLowerCase() });
+  let userInfo = await User.findOne({ wallet: wallet_address });
   if (!userInfo) {
     return res
       .status(400)
@@ -392,7 +392,7 @@ export const userRewards = async (req, res) => {
       .status(400)
       .json({ status: "failure", message: "Missing required fields" });
   }
-  let userInfo = await User.findOne({ wallet: wallet_address.toLowerCase() });
+  let userInfo = await User.findOne({ wallet: wallet_address });
   if (!userInfo) {
     return res
       .status(400)
@@ -472,7 +472,7 @@ export const mintXATOMS = async (req, res) => {
       .json({ status: "failure", message: "Missing required fields" });
   }
 
-  let userInfo = await User.findOne({ wallet: wallet_address.toLowerCase() });
+  let userInfo = await User.findOne({ wallet: wallet_address });
   if (!userInfo) {
     return res
       .status(400)
